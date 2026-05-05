@@ -59,6 +59,7 @@ def run_migrations_offline() -> None:
 
 
 def run_migrations_online() -> None:
+    print("DB URL =", config.get_main_option("sqlalchemy.url"))
     connectable = engine_from_config(
         {
             "sqlalchemy.url": config.get_main_option("sqlalchemy.url")
